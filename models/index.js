@@ -13,14 +13,14 @@ Category.hasMany(Product, {
   onDelete: 'CASCADE'
 })
 
-Product.belongToMany(Tag, {
+Product.belongsToMany(Tag, {
   through: {
     model: ProductTag,
     unique: false
   }
 })
 
-Tag.belongToMany(Product, {
+Tag.belongsToMany(Product, {
   through: {
     model: ProductTag,
     unique: false
